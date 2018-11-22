@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dapp:
+    build:
+      context: .
+    container_name: dapp
+    image: dapp
+    volumes:
+      - /tmp:/tmp
+      - ~/.dapp:/root/.dapp
+      - ~/.helm:/root/.helm
+      - ~/src:/src
+      - /var/run/docker.sock:/var/run/docker.sock
